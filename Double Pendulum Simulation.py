@@ -13,7 +13,7 @@ from math import sin, cos, pi
 import numpy as np
 from numpy.linalg import inv
 
-def G(y,t): 
+def Graph(y,t): 
     a1d, a2d = y[0], y[1]
     a1, a2 = y[2], y[3]
 
@@ -30,10 +30,10 @@ def G(y,t):
     return np.array([accel[0], accel[1], a1d, a2d])
 
 def RK4_step(y, t, dt):
-    k1 = G(y,t)
-    k2 = G(y+0.5*k1*dt, t+0.5*dt)
-    k3 = G(y+0.5*k2*dt, t+0.5*dt)
-    k4 = G(y+k3*dt, t+dt)
+    k1 = Graph(y,t)
+    k2 = Graph(y+0.5*k1*dt, t+0.5*dt)
+    k3 = Graph(y+0.5*k2*dt, t+0.5*dt)
+    k4 = Graph(y+k3*dt, t+dt)
 
     return dt * (k1 + 2*k2 + 2*k3 + k4) /6
 

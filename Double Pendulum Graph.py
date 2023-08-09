@@ -1,10 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-
 #Ishaan Bansal
 #Coded using Jupyter Notebook
-
 
 import numpy as np 
 from numpy.linalg import inv
